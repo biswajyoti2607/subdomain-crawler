@@ -1,0 +1,27 @@
+{
+  "name": "subdomain-crawler",
+  "version": "1.0.0",
+  "description": "Node based crawler to crawl a specified subdomain",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"node --max-old-space-size=8192 index.js\" \"node --max-old-space-size=8192 stats.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biswajyoti2607/subdomain-crawler.git"
+  },
+  "author": "Biswajyoti Pal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/biswajyoti2607/subdomain-crawler/issues"
+  },
+  "homepage": "https://github.com/biswajyoti2607/subdomain-crawler#readme",
+  "dependencies": {
+    "crawler": "^1.1.2",
+    "lokijs": "^1.5.1",
+    "rel-to-abs": "^0.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  }
+}
