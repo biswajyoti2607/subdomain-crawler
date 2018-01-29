@@ -71,8 +71,11 @@ function init() {
 				var link = config.crawler.protocol + "://" + config.crawler.subdomain[id] + "." + config.crawler.domain;
 				if(typeof pages.by('url', link) == "undefined") {
 					pages.insert({url : link, processed : false, content : ""});
-					crawler.queue(link);
 				}
+			}
+			var currUrls = pages.find({'processed': false});
+			for(var id in currUrls) {
+				crawler.queue(currUrls[id]);
 			}
 		}
 	});
